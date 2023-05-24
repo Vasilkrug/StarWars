@@ -5,7 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
+  left: calc(50% - 72px);
+  top: 50px;
 
   p {
     font-style: normal;

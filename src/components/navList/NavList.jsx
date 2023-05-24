@@ -9,9 +9,11 @@ const NavList = () => {
             <ul className={'nav-list'}>
                 {navData.map(item => {
                     return (
-                        <NavItem id={item.id}
+                        <NavItem key={item.id}
+                                 id={item.id}
                                  img={item.img}
-                                 title={item.title}/>
+                                 title={item.title}
+                                 path={item.route}/>
                     )
                 })}
             </ul>

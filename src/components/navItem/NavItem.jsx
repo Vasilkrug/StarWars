@@ -1,14 +1,15 @@
 import React from 'react';
 import './navItem.scss';
+import {Link} from "react-router-dom";
 
-const NavItem = ({id, img, title}) => {
+const NavItem = ({img, title, path}) => {
     return (
-        <li>
-            <li key={id} className={'nav-item'}>
-                <img src={img} alt={title}/>
-                <p>{title}</p>
-            </li>
-        </li>
+        <Link to={path}>
+                <li className={'nav-item'}>
+                    <img src={img} alt={title}/>
+                    <p>{title}</p>
+                </li>
+        </Link>
     );
 };
 
