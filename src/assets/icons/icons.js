@@ -1,0 +1,6 @@
+export const films = require('./films.png')
+export const characters = require('./characters.png')
+export const planets = require('./planets.png')
+export const species = require('./species.png')
+export const starships = require('./starships.png')
+export const vehicles = require('./vehicles.png')
