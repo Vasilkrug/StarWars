@@ -1,10 +1,14 @@
 import './App.scss';
+import {Route, Routes} from "react-router-dom";
+import Home from "./pages/home/Home";
 
 const App = () => {
     return (
-        <div className="App">
-
-        </div>
+        <main className="App">
+         <Routes>
+             <Route path={'/'} element={<Home/>}/>
+         </Routes>
+        </main>
     );
 }
 
