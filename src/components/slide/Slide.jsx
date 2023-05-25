@@ -1,12 +1,12 @@
 import React from 'react';
 import './Slide.scss';
 
-const Slide = ({img,title,year}) => {
+const Slide = ({index,title,year}) => {
     const release = new Date(year);
     return (
         <>
             <div className="slide-img">
-                <img src={img} alt=""/>
+                <img src={`https://starwars-visualguide.com/assets/img/films/${index}.jpg`} alt=""/>
             </div>
             <div className="slide-desc">
                 <h2>{title}</h2>

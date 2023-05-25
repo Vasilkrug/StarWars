@@ -4,7 +4,6 @@ import {useSelector} from "react-redux";
 import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import Slide from "../slide/Slide";
-import {sliderImagesData} from "./sliderImagesData";
 import Loader from "../loader/Loader";
 import SliderButtons from "../sliderButtons/SliderButtons";
 
@@ -23,7 +22,7 @@ const Slider = () => {
                         {films.map((film, index) => {
                             return (
                                 <SwiperSlide key={index}>
-                                    <Slide img={sliderImagesData[index].img}
+                                    <Slide index={index + 1}
                                            title={film.title}
                                            year={film['release_date']}/>
                                 </SwiperSlide>
