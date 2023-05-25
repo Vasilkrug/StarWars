@@ -6,6 +6,7 @@ import 'swiper/css';
 import Slide from "../slide/Slide";
 import {sliderImagesData} from "./sliderImagesData";
 import Loader from "../loader/Loader";
+import SliderButtons from "../sliderButtons/SliderButtons";
 
 const Slider = () => {
     const films = useSelector(state => state.films.films)
@@ -17,7 +18,6 @@ const Slider = () => {
                 slidesPerView={2}
                 className={'films-slider'}
             >
-
                 {!films.length ? <Loader/> :
                     films.map((film, index) => {
                         return (
@@ -29,7 +29,7 @@ const Slider = () => {
                         )
                     })}
 
-                ...
+                <SliderButtons/>
             </Swiper>
         </div>
     );

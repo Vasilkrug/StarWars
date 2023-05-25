@@ -1,0 +1,12 @@
+.slider-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 200px;
+  margin: 20px auto;
+
+  span {
+    font-size: 15px;
+    line-height: 19px;
+  }
+}
