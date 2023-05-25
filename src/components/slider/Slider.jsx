@@ -12,26 +12,29 @@ const Slider = () => {
     const films = useSelector(state => state.films.films)
 
     return (
-        <div className={'slider-container'}>
-            <Swiper
-                spaceBetween={40}
-                slidesPerView={2}
-                className={'films-slider'}
-            >
-                {!films.length ? <Loader/> :
-                    films.map((film, index) => {
-                        return (
-                            <SwiperSlide key={index}>
-                                <Slide img={sliderImagesData[index].img}
-                                       title={film.title}
-                                       year={film['release_date']}/>
-                            </SwiperSlide>
-                        )
-                    })}
+        <>
+            {!films.length ? <Loader/> :
+                <div className={'slider-container'}>
+                    <Swiper
+                        spaceBetween={40}
+                        slidesPerView={2}
+                        className={'films-slider'}
+                    >
+                        {films.map((film, index) => {
+                            return (
+                                <SwiperSlide key={index}>
+                                    <Slide img={sliderImagesData[index].img}
+                                           title={film.title}
+                                           year={film['release_date']}/>
+                                </SwiperSlide>
+                            )
+                        })}
 
-                <SliderButtons/>
-            </Swiper>
-        </div>
+                        <SliderButtons/>
+                    </Swiper>
+                </div>
+            }
+        </>
     );
 };
 

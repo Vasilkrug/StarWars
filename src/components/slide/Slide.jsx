@@ -11,7 +11,7 @@ const Slide = ({img,title,year}) => {
             <div className="slide-desc">
                 <h2>{title}</h2>
                 <img src={require('../../assets/images/ball.png')} alt="ball"/>
-                <span>{release.getFullYear()}</span>
+                <span>Release in {release.getFullYear()}</span>
             </div>
         </>
     );

@@ -8,11 +8,11 @@ const SliderButtons = () => {
 
     return (
         <div className={'slider-buttons'}>
-            <button onClick={() => swiper.slideNext()}>
+            <button onClick={() => swiper.slidePrev()}>
                 <img src={arrowLeft} alt=""/>
             </button>
             <span>Press and drag</span>
-            <button onClick={() => swiper.slidePrev()}>
+            <button onClick={() => swiper.slideNext()}>
                 <img src={arrowRight} alt=""/>
             </button>
         </div>
