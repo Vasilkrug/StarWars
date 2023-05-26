@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import Films from "./pages/films/Films";
 import Logo from "./components/logo/Logo";
 import React from "react";
+import Film from "./pages/film/Film";
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
             <Routes>
                 <Route path={'/'} element={<Home/>}/>
                 <Route path={'/films'} element={<Films/>}/>
+                <Route path={'/films/:id'} element={<Film/>}/>
             </Routes>
         </main>
     );
