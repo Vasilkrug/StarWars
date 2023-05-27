@@ -3,7 +3,7 @@ import './Films.scss';
 import {getApiData} from "../../api/api";
 import {useDispatch} from "react-redux";
 import {getFilms} from "../../store/actions/filmsActions";
-import Slider from "../../components/slider/Slider";
+import FilmSlider from "../../components/filmSlider/FilmSlider";
 
 
 const Films = () => {
@@ -15,7 +15,7 @@ const Films = () => {
     }, [])
     return (
         <div className={'page films-page'}>
-            <Slider/>
+            <FilmSlider/>
         </div>
     );
 };

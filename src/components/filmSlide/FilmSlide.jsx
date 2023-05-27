@@ -1,8 +1,8 @@
 import React from 'react';
-import './Slide.scss';
+import './FilmSlide.scss';
 import {Link} from "react-router-dom";
 
-const Slide = ({index,title,year}) => {
+const FilmSlide = ({index,title,year}) => {
     const release = new Date(year);
     return (
         <>
@@ -20,4 +20,4 @@ const Slide = ({index,title,year}) => {
     );
 };
 
-export default Slide;
+export default FilmSlide;
