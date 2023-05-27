@@ -1,0 +1,17 @@
+.film-info {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/images/filmsbg.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 764px) {
+    background-image: none;
+  }
+}

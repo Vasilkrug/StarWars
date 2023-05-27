@@ -5,7 +5,7 @@ import loader from '../../assets/icons/stormtrooper.svg';
 const Loader = () => {
     return (
         <div className={'loader'}>
-            <img src={loader} alt=""/>
+            <img src={loader} alt='loader'/>
         </div>
     );
 };

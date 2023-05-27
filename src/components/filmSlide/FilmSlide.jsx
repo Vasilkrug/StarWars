@@ -1,22 +1,26 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import {FILM_CATEGORY, IMG_URL} from '../../api/constants';
+import {ball} from '../../assets/images/images';
 import './FilmSlide.scss';
-import {Link} from "react-router-dom";
 
-const FilmSlide = ({index,title,year}) => {
+
+const FilmSlide = ({index, title, year}) => {
     const release = new Date(year);
     return (
-        <>
-            <div className="slide-img">
-                <img src={`https://starwars-visualguide.com/assets/img/films/${index}.jpg`} alt=""/>
+        <div className={'my-swiper-slide'}>
+            <div className='slide-img'>
+                <img src={`${IMG_URL}${FILM_CATEGORY}/${index}.jpg`}
+                     alt='film'/>
             </div>
-            <div className="slide-desc">
+            <div className='slide-desc'>
                 <Link to={`/films/${index}`}>
                     <h2>{title}</h2>
                 </Link>
-                <img src={require('../../assets/images/ball.png')} alt="ball"/>
+                <img src={ball} alt='ball'/>
                 <span>Release in {release.getFullYear()}</span>
             </div>
-        </>
+        </div>
     );
 };
 

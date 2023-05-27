@@ -1,7 +1,6 @@
 import React from 'react';
+import {NavList} from '../../components/index';
 import './Home.scss';
-
-import NavList from "../../components/navList/NavList";
 
 const Home = () => {
     return (

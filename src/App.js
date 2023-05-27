@@ -1,14 +1,13 @@
+import {Route, Routes} from 'react-router-dom';
+import {Home, Films, Film} from './pages/index'
+import {Logo} from './components/index';
+import React from 'react';
 import './App.scss';
-import {Route, Routes} from "react-router-dom";
-import Home from "./pages/home/Home";
-import Films from "./pages/films/Films";
-import Logo from "./components/logo/Logo";
-import React from "react";
-import Film from "./pages/film/Film";
+
 
 const App = () => {
     return (
-        <main className="App">
+        <main className='App'>
             <Logo/>
             <Routes>
                 <Route path={'/'} element={<Home/>}/>

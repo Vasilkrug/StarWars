@@ -1,7 +1,7 @@
 import React from 'react';
+import {navData} from './navData';
+import {NavItem} from '../index';
 import './NavList.scss';
-import {navData} from "./navData";
-import NavItem from "../navItem/NavItem";
 
 const NavList = () => {
     return (

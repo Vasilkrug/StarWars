@@ -1,16 +1,11 @@
-import React, {useEffect} from 'react';
+import React from 'react';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {SliderButtons} from '../index';
+import {EMPTY_IMG_LINK} from '../../api/constants';
 import './Slider.scss';
 import 'swiper/css';
-import {Swiper, SwiperSlide} from "swiper/react";
-import SliderButtons from "../sliderButtons/SliderButtons";
-import {EMPTY_IMG_LINK} from "../../api/constants";
 
 const Slider = ({url, title, data}) => {
-
-
-    useEffect(() => {
-
-    })
 
     return (
         <div className={'slider'}>
@@ -24,7 +19,9 @@ const Slider = ({url, title, data}) => {
                     return (
                         <SwiperSlide className={'slider-slide'}>
                             <h2>{title}</h2>
-                            <img onError={(e) => e.target.src = EMPTY_IMG_LINK} src={`${url}/${item}.jpg`} alt=""/>
+                            <img onError={(e) => e.target.src = EMPTY_IMG_LINK}
+                                 src={`${url}/${item}.jpg`}
+                                 alt=""/>
                         </SwiperSlide>
                     )
                 })}

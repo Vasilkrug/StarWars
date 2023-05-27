@@ -1,11 +1,10 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {FilmSlide, Loader, SliderButtons} from '../index'
 import './FilmSlider.scss';
-import {useSelector} from "react-redux";
-import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
-import FilmSlide from "../filmSlide/FilmSlide";
-import Loader from "../loader/Loader";
-import SliderButtons from "../sliderButtons/SliderButtons";
+
 
 const FilmSlider = () => {
     const films = useSelector(state => state.films.films)
