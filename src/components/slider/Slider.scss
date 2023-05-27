@@ -1,12 +1,34 @@
-.slider-container {
-  height: 100%;
+.slider {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1E1E1E;
+  max-width: 320px;
+  min-height: 300px;
 
-  .films-slider {
-    width: 100%;
-    padding: 0 20px;
+  .my-slider {
+    width: 250px;
+
+    .slider-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 10px;
+
+      h2 {
+        font-size: 13px;
+      }
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+    }
   }
-
 }

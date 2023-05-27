@@ -1,39 +1,36 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Slider.scss';
-import {useSelector} from "react-redux";
-import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
-import Slide from "../slide/Slide";
-import Loader from "../loader/Loader";
+import {Swiper, SwiperSlide} from "swiper/react";
 import SliderButtons from "../sliderButtons/SliderButtons";
+import {EMPTY_IMG_LINK} from "../../api/constants";
 
-const Slider = () => {
-    const films = useSelector(state => state.films.films)
+const Slider = ({url, title, data}) => {
+
+
+    useEffect(() => {
+
+    })
 
     return (
-        <>
-            {!films.length ? <Loader/> :
-                <div className={'slider-container'}>
-                    <Swiper
-                        spaceBetween={40}
-                        slidesPerView={2}
-                        className={'films-slider'}
-                    >
-                        {films.map((film, index) => {
-                            return (
-                                <SwiperSlide key={index}>
-                                    <Slide index={index + 1}
-                                           title={film.title}
-                                           year={film['release_date']}/>
-                                </SwiperSlide>
-                            )
-                        })}
-
-                        <SliderButtons/>
-                    </Swiper>
-                </div>
-            }
-        </>
+        <div className={'slider'}>
+            <h2>{title}</h2>
+            <Swiper
+                slidesPerView={3}
+                className={'my-slider'}
+                spaceBetween={15}
+            >
+                {data.map(item => {
+                    return (
+                        <SwiperSlide className={'slider-slide'}>
+                            <h2>{title}</h2>
+                            <img onError={(e) => e.target.src = EMPTY_IMG_LINK} src={`${url}/${item}.jpg`} alt=""/>
+                        </SwiperSlide>
+                    )
+                })}
+                {data.length <= 3 ? null : <SliderButtons/>}
+            </Swiper>
+        </div>
     );
 };
 
