@@ -1,8 +1,9 @@
 .film-page {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   @media (max-width: 764px) {
-    padding-top: 200px;
+    padding: 200px 15px;
   }
 
 

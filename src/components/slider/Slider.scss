@@ -1,17 +1,21 @@
 .slider {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 20px;
   padding: 20px;
   border-radius: 10px;
   background-color: #1E1E1E;
-  max-width: 320px;
-  min-height: 300px;
+  max-width: 450px;
+  min-height: 250px;
+
+  @media (max-width: 460px) {
+    max-width: 350px;
+  }
 
   .my-slider {
-    width: 250px;
+    width: 100%;
 
     .slider-slide {
       display: flex;

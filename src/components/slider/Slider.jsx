@@ -6,7 +6,7 @@ import './Slider.scss';
 import 'swiper/css';
 
 const Slider = ({url, title, data}) => {
-
+    
     return (
         <div className={'slider'}>
             <h2>{title}</h2>

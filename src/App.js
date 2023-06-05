@@ -6,6 +6,7 @@ import './App.scss';
 
 
 const App = () => {
+    console.log('app')
     return (
         <main className='App'>
             <Logo/>

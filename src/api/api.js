@@ -5,6 +5,6 @@ export const getApiData = async (url) => {
         const request = await axios.get(url)
         return await request.data
     } catch (e) {
-
+        console.log(e)
     }
 }
