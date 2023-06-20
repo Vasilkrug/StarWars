@@ -13,7 +13,7 @@ import './FilmInfo.scss';
 const FilmInfo = ({film}) => {
     return (
         <div id={'film-info'} className='film-info'>
-            <Slider url={`${IMG_URL}${CHARACTERS_CATEGORY}`} title={'Characters'}
+            <Slider url={`${IMG_URL}${CHARACTERS_CATEGORY}`} title={'People'}
                     data={getQueryNumbers(film.characters)}/>
             <Slider url={`${IMG_URL}${PLANETS_CATEGORY}`} title={'Planets'}
                     data={getQueryNumbers(film.planets)}/>
