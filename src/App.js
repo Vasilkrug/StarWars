@@ -1,5 +1,5 @@
 import {Route, Routes} from 'react-router-dom';
-import {Home, Films, Film} from './pages/index'
+import {Home, Films, Film,Characters} from './pages/index'
 import {Logo, Loader} from './components/index';
 import React, {useEffect, useState} from 'react';
 import './App.scss';
@@ -25,6 +25,7 @@ const App = () => {
             <Routes>
                 <Route path={'/'} element={<Home/>}/>
                 <Route path={'/films'} element={<Films/>}/>
+                <Route path={'/characters'} element={<Characters/>}/>
                 <Route path={'/films/:id'} element={<Film/>}/>
             </Routes>
             {loading ? <Loader/> : null}

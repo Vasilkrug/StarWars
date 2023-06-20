@@ -4,7 +4,7 @@ import './Home.scss';
 
 const Home = () => {
     return (
-        <div className={'page home-page'}>
+        <div className={'home-page'}>
             <NavList/>
         </div>
     );

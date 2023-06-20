@@ -15,7 +15,7 @@ const Films = () => {
             .then(data => dispatch(getFilms(data.results)))
     }, [])
     return (
-        <div className={'page films-page'}>
+        <div className={'films-page'}>
             <FilmSlider/>
         </div>
     );

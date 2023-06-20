@@ -21,17 +21,16 @@ const Film = () => {
     return (
         <>
             {!Object.keys(film).length ? <Loader/> :
-                <div className={'page film-page'}>
+                <div className={'film-page'}>
                     <div className='film-preview'>
                         <FilmItem id={id}
                                   title={film.title}
                                   text={film['opening_crawl']}
                                   director={film.director}
                                   release={film['release_date']}/>
-                        <AnchorLink href={'#film-info'}>
-                            <a className={'pointer'}>
-                                More Info
-                                <img src={arrowLeft} alt='arrow'/></a>
+                        <AnchorLink className={'pointer'} href={'#film-info'}>
+                            More Info
+                            <img src={arrowLeft} alt='arrow'/>
                         </AnchorLink>
                     </div>
                     <FilmInfo film={film}/>
