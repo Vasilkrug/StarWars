@@ -8,6 +8,8 @@ import FilmItem from "./filmItem/FilmItem";
 import FilmInfo from "./filmInfo/FilmInfo";
 import FilmSlider from "./filmSlider/FilmSlider";
 import NavList from "./navList/NavList";
+import CardList from "./cardList/CardList";
+
 export {
     Logo,
     FilmSlide,
@@ -18,5 +20,6 @@ export {
     FilmItem,
     FilmInfo,
     FilmSlider,
-    NavList
+    NavList,
+    CardList
 }
