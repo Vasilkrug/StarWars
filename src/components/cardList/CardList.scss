@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 50px;
+  padding-bottom: 20px;
 
   .card-item {
     width: max-content;
@@ -12,9 +13,9 @@
     flex-direction: column;
 
     h3 {
-      display: inline-block;
-      background-color: #021414;
+      max-width: 150px;
       text-align: center;
+      background-color: #021414;
       padding: 20px;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './CardList.scss';
-import {IMG_URL} from "../../api/constants";
+import {EMPTY_IMG_LINK, IMG_URL} from "../../api/constants";
 import {getQueryNumber} from "../../api/helpers";
 
 const CardList = ({title}) => {
@@ -14,9 +14,13 @@ const CardList = ({title}) => {
         <ul className={'card-list'}>
             {data.map(item => {
                 return (
-                    <li className={'card-item'}>
+                    <li key={item.name} className={'card-item'}>
                         <h3>{item.name}</h3>
-                        <img src={`${IMG_URL}${title}/${getQueryNumber(item.url)}.jpg`} alt=""/>
+                        <img
+                            src={`${IMG_URL}${title}/${getQueryNumber(item.url)}.jpg`}
+                            alt=""
+                            onError={(e) => e.target.src = EMPTY_IMG_LINK}
+                        />
                     </li>
                 )
             })}
