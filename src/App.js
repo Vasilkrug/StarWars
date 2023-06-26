@@ -4,6 +4,7 @@ import {Logo, Loader} from './components/index';
 import React, {useEffect, useState} from 'react';
 import './App.scss';
 import {getAllData} from "./api/api";
+import PageItem from "./pages/pageItem/PageItem";
 
 
 const App = () => {
@@ -31,6 +32,10 @@ const App = () => {
                 <Route path={'/planets'} element={<Planets/>}/>
                 <Route path={'/starships'} element={<Starships/>}/>
                 <Route path={'/films/:id'} element={<Film/>}/>
+                <Route path={'/species/:id'} element={<PageItem/>}/>
+                <Route path={'/planets/:id'} element={<PageItem/>}/>
+                <Route path={'/starships/:id'} element={<PageItem/>}/>
+                <Route path={'/vehicles/:id'} element={<PageItem/>}/>
             </Routes>
             {loading ? <Loader/> : null}
         </main>

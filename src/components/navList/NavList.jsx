@@ -4,6 +4,7 @@ import {NavItem} from '../index';
 import './NavList.scss';
 
 const NavList = () => {
+
     return (
         <nav className={'nav'}>
             <ul className={'nav-list'}>
