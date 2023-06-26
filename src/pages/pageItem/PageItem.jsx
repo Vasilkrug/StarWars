@@ -1,14 +1,13 @@
 import React from 'react';
 import './PageItem.scss';
-import {useLocation, useParams} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import {EMPTY_IMG_LINK} from "../../api/constants";
 
 const PageItem = () => {
-    const params = useParams();
     const location = useLocation();
     const {state} = location;
     const title = location.state.title;
-    const filteredKeys = ['name', 'edited', 'films', 'created', 'url', 'title', 'img', 'pilots']
+    const filteredKeys = ['residents','people','homeworld','name', 'edited', 'films', 'created', 'url', 'title', 'img', 'pilots']
 
     return (
         <div className={`${title} page-item-container`}>
@@ -22,14 +21,12 @@ const PageItem = () => {
                 </div>
                 <ul className={'page-item-info-list'}>
                     {Object.keys(state).map((key, index) => {
-                        return (
+                        return (filteredKeys.includes(key) ? null :
                             <li key={index}>
-                                {filteredKeys.includes(key) ? null
-                                    : <h3>{key}:
-                                        <span>{state[key]}</span>
-                                    </h3>}
-                            </li>
-                        )
+                                <h3>{key}:
+                                    <span>{state[key]}</span>
+                                </h3>
+                            </li>)
                     })}
                 </ul>
             </div>
