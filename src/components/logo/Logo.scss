@@ -1,11 +1,9 @@
 .logo {
-  width: 145px;
-  margin: 0 auto;
+  margin: 30px auto 100px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
 
   p {
     font-style: normal;
@@ -13,22 +11,6 @@
     font-size: 35px;
     line-height: 31px;
     text-transform: uppercase;
-    color: #FFFFFF;
-  }
-
-  &:after, &:before {
-    content: '';
-    position: absolute;
-    width: 64px;
-    height: 1px;
-    background-color: #FFFFFF;
-  }
-
-  &:after {
-    bottom: -15px;
-  }
-
-  &:before {
-    top: -15px;
+    color: #FFE300;
   }
 }

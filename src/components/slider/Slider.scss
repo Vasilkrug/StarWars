@@ -12,7 +12,7 @@
   .my-slider {
     width: 250px;
 
-    .slider-slide {
+    .slide {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -26,6 +26,8 @@
       h2 {
         font-size: 13px;
         text-align: center;
+        cursor: pointer;
+        color: #FFE300;
       }
 
       img {

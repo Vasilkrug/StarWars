@@ -5,6 +5,7 @@ import React, {useEffect, useState} from 'react';
 import './App.scss';
 import {getAllData} from "./api/api";
 import PageItem from "./pages/pageItem/PageItem";
+import BreadCrumbs from "./components/breadCrumbs/BreadCrumbs";
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
     return (
         <main className='App'>
             <Logo/>
+            <BreadCrumbs/>
             <Routes>
                 <Route path={'/'} element={<Home/>}/>
                 <Route path={'/films'} element={<Films/>}/>
@@ -36,6 +38,7 @@ const App = () => {
                 <Route path={'/planets/:id'} element={<PageItem/>}/>
                 <Route path={'/starships/:id'} element={<PageItem/>}/>
                 <Route path={'/vehicles/:id'} element={<PageItem/>}/>
+                <Route path={'/characters/:id'} element={<PageItem/>}/>
             </Routes>
             {loading ? <Loader/> : null}
         </main>

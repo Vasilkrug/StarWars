@@ -7,7 +7,7 @@ const PageItem = () => {
     const location = useLocation();
     const {state} = location;
     const title = location.state.title;
-    const filteredKeys = ['residents','people','homeworld','name', 'edited', 'films', 'created', 'url', 'title', 'img', 'pilots']
+    const filteredKeys = ['vehicles','starships','species','residents','people','homeworld','name', 'edited', 'films', 'created', 'url', 'title', 'img', 'pilots']
 
     return (
         <div className={`${title} page-item-container`}>

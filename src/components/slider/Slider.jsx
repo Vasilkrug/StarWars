@@ -1,13 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {SliderButtons} from '../index';
 import {EMPTY_IMG_LINK} from '../../api/constants';
 import {getQueryNumber} from '../../api/helpers';
 import './Slider.scss';
 import 'swiper/css';
+import {Link} from "react-router-dom";
 
 const Slider = ({url, title, data}) => {
-    const [currentData, setCurrentData] = useState([])
+    const [currentData, setCurrentData] = useState([]);
+    const sliderRef = useRef(null)
 
     useEffect(() => {
         const data = localStorage.getItem('data')
@@ -21,7 +23,7 @@ const Slider = ({url, title, data}) => {
     }, [])
 
     return (
-        <div className={'slider'}>
+        <div ref={sliderRef} className={`slider ${title.toLowerCase()}`}>
             <h2>{title}</h2>
             <Swiper
                 slidesPerView={3}
@@ -30,8 +32,13 @@ const Slider = ({url, title, data}) => {
             >
                 {data.map((item, index) => {
                     return (
-                        <SwiperSlide key={item} className={'slider-slide'}>
-                            <h2>{currentData[index]?.name}</h2>
+                        <SwiperSlide key={item} className={'slide'}>
+                            <Link to={`/${title.toLowerCase()}/${item}`}
+                                  state={{...currentData[index], title: title.toLowerCase(), img: `${url}/${item}.jpg`}}
+                            >
+                                <h2>{currentData[index]?.name}</h2>
+                            </Link>
+
                             <img onError={(e) => e.target.src = EMPTY_IMG_LINK}
                                  src={`${url}/${item}.jpg`}
                                  alt='slide image'/>
