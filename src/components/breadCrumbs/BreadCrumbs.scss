@@ -1,0 +1,24 @@
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+
+  .crumb {
+    font-size: 18px;
+    text-transform: capitalize;
+
+    a {
+      color: #FFE300;
+    }
+  }
+
+  .crumb:after {
+    content: '/';
+    margin: 0 10px;
+  }
+
+  .crumb:last-child:after {
+    display: none;
+  }
+}
