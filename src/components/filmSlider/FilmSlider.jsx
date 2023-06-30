@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {FilmSlide, Loader, SliderButtons} from '../index'
@@ -7,7 +7,18 @@ import 'swiper/css';
 
 
 const FilmSlider = () => {
-    const films = useSelector(state => state.films.films)
+    const films = useSelector(state => state.films.films);
+    const [width, setWidth] = useState(1440);
+
+    const handleResize = () => {
+        setWidth(window.innerWidth)
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+    }, [])
 
     return (
         <>
@@ -15,7 +26,7 @@ const FilmSlider = () => {
                 <div className={'slider-container'}>
                     <Swiper
                         spaceBetween={40}
-                        slidesPerView={2}
+                        slidesPerView={width < 662 ? 1 : 2}
                         className={'films-slider'}
                     >
                         {films.map((film, index) => {
