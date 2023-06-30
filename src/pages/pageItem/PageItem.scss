@@ -3,6 +3,10 @@
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 865px) {
+    padding: 20px;
+  }
+
   .page-item-card {
     display: flex;
     gap: 50px;
@@ -14,7 +18,7 @@
     @media (max-width: 865px) {
       justify-content: center;
       align-items: center;
-      width: min-content;
+      width: 100%;
     }
 
     .page-item-card-title {
