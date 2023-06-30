@@ -4,16 +4,15 @@ import './BreadCrumbs.scss';
 
 const BreadCrumbs = () => {
     const location = useLocation();
-
     let activeCrumbs = ''
     const crumbs = location.pathname.split('/')
-        .filter(crumb => crumb !== '')
+        .filter(crumb => crumb !== '' && crumb !== 'StarWars')
         .map((crumb, index, array) => {
             activeCrumbs += `/${crumb}`
             if (index === 0) {
                 return (
                     <>
-                        <div key={crumb} className={'crumb'}>
+                        <div key={index} className={'crumb'}>
                             <Link to={'/'}>home</Link>
                         </div>
                         <div className={'crumb'} key={crumb}>
