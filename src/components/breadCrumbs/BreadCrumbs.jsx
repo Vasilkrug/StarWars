@@ -12,7 +12,7 @@ const BreadCrumbs = () => {
             if (index === 0) {
                 return (
                     <>
-                        <div className={'crumb'}>
+                        <div key={crumb} className={'crumb'}>
                             <Link to={'/'}>home</Link>
                         </div>
                         <div className={'crumb'} key={crumb}>
