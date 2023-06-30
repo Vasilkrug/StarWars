@@ -24,7 +24,6 @@ const App = () => {
             <BreadCrumbs/>
             <Routes>
                 <Route path={'/'} element={<Home/>}/>
-                <Route path={'/StarWars'} element={<Home/>}/>
                 <Route path={'/films'} element={<Films/>}/>
                 <Route path={'/characters'} element={<Characters/>}/>
                 <Route path={'/species'} element={<Species/>}/>
