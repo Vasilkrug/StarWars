@@ -4,12 +4,12 @@ import './navItem.scss';
 
 const NavItem = ({img, title, path}) => {
     return (
-        <Link to={path}>
-            <li className={'nav-item'}>
+        <li className={'nav-item'}>
+            <Link to={path}>
                 <img src={img} alt={title}/>
                 <p>{title}</p>
-            </li>
-        </Link>
+            </Link>
+        </li>
     );
 };
 
