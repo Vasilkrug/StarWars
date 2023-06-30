@@ -1,19 +1,15 @@
 import React from 'react';
-import {Link, useLocation, useNavigate} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import './BreadCrumbs.scss';
 
 const BreadCrumbs = () => {
     const location = useLocation();
-    const navigation = useNavigate();
 
     let activeCrumbs = ''
     const crumbs = location.pathname.split('/')
         .filter(crumb => crumb !== '')
         .map((crumb, index, array) => {
             activeCrumbs += `/${crumb}`
-            if (crumb === 'StarWars'){
-                navigation('/')
-            }
             if (index === 0) {
                 return (
                     <>
