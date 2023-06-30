@@ -1,11 +1,12 @@
 import React, {useEffect, useRef, useState} from 'react';
+import {Link} from 'react-router-dom';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {SliderButtons} from '../index';
 import {EMPTY_IMG_LINK} from '../../api/constants';
 import {getQueryNumber} from '../../api/helpers';
 import './Slider.scss';
 import 'swiper/css';
-import {Link} from "react-router-dom";
+
 
 const Slider = ({url, title, data}) => {
     const [currentData, setCurrentData] = useState([]);

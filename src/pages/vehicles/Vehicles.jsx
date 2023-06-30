@@ -1,6 +1,6 @@
 import React from 'react';
+import {CardList} from '../../components';
 import './Vehicles.scss';
-import {CardList} from "../../components";
 
 const Vehicles = () => {
     return (

@@ -6,6 +6,7 @@ import Species from "./species/Species";
 import Vehicles from "./vehicles/Vehicles";
 import Starships from "./starships/Starships";
 import Planets from "./planets/Planets";
+import PageItem from "./pageItem/PageItem";
 
 export {
     Film,
@@ -15,5 +16,6 @@ export {
     Species,
     Vehicles,
     Starships,
-    Planets
+    Planets,
+    PageItem
 }

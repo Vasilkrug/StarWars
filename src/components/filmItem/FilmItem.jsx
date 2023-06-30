@@ -1,12 +1,12 @@
 import React from 'react';
+import {FILM_CATEGORY, IMG_URL} from '../../api/constants';
 import './FilmItem.scss';
-import {FILM_CATEGORY, IMG_URL} from "../../api/constants";
 
 const FilmItem = ({id, title, director, release, text}) => {
     return (
         <div className='film-item'>
             <div className='film-img'>
-                <img src={`${IMG_URL}${FILM_CATEGORY}/${id}.jpg`} alt="film"/>
+                <img src={`${IMG_URL}${FILM_CATEGORY}/${id}.jpg`} alt='film'/>
             </div>
             <div className='film-desc'>
                 <p>{title}</p>

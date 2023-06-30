@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
+import {EMPTY_IMG_LINK, IMG_URL} from '../../api/constants';
+import {getQueryNumber} from '../../api/helpers';
 import './CardList.scss';
-import {EMPTY_IMG_LINK, IMG_URL} from "../../api/constants";
-import {getQueryNumber} from "../../api/helpers";
-import {Link} from "react-router-dom";
 
 const CardList = ({title}) => {
     const [data, setData] = useState([]);
@@ -23,7 +23,7 @@ const CardList = ({title}) => {
                 {data.slice(0, itemsToShow).map((item, index) => {
                     return (
                         <Link key={item.name}
-                              state={{...data[index],title,img:`${IMG_URL}${title}/${getQueryNumber(item.url)}.jpg`}}
+                              state={{...data[index], title, img: `${IMG_URL}${title}/${getQueryNumber(item.url)}.jpg`}}
                               to={`/${title}/${getQueryNumber(item.url)}`}>
                             <li className={'card-item'}>
                                 <h3>{item.name}</h3>

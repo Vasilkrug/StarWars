@@ -1,12 +1,9 @@
 import {Route, Routes} from 'react-router-dom';
-import {Home, Films, Film, Characters, Species, Vehicles, Planets, Starships} from './pages/index'
-import {Logo, Loader} from './components/index';
+import {PageItem, Home, Films, Film, Characters, Species, Vehicles, Planets, Starships} from './pages/index'
+import {Logo, Loader, BreadCrumbs} from './components/index';
 import React, {useEffect, useState} from 'react';
+import {getAllData} from './api/api';
 import './App.scss';
-import {getAllData} from "./api/api";
-import PageItem from "./pages/pageItem/PageItem";
-import BreadCrumbs from "./components/breadCrumbs/BreadCrumbs";
-
 
 const App = () => {
     const [loading, setLoading] = useState(false)

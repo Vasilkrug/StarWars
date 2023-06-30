@@ -27,7 +27,6 @@ const FilmSlider = () => {
                                 </SwiperSlide>
                             )
                         })}
-
                         <SliderButtons/>
                     </Swiper>
                 </div>

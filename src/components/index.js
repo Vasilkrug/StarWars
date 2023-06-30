@@ -9,6 +9,7 @@ import FilmInfo from "./filmInfo/FilmInfo";
 import FilmSlider from "./filmSlider/FilmSlider";
 import NavList from "./navList/NavList";
 import CardList from "./cardList/CardList";
+import BreadCrumbs from "./breadCrumbs/BreadCrumbs";
 
 export {
     Logo,
@@ -21,5 +22,6 @@ export {
     FilmInfo,
     FilmSlider,
     NavList,
-    CardList
+    CardList,
+    BreadCrumbs
 }
