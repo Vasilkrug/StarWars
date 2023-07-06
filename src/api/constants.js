@@ -7,5 +7,5 @@ export const VEHICLES_CATEGORY = 'vehicles';
 export const STARSHIPS_CATEGORY = 'starships';
 export const CHARACTERS_CATEGORY = 'characters';
 export const IMG_URL = 'https://starwars-visualguide.com/assets/img/';
-export const EMPTY_IMG_LINK = 'https://static1.srcdn.com/wordpress/wp-content/uploads/2020/11/The-Mandalorian-Star-Wars-No-Guard-Rails.jpg?q=50&fit=contain&w=943&h=&dpr=1.5';
+export const EMPTY_IMG_LINK = 'https://starwars-visualguide.com/assets/img/placeholder.jpg';
 export const PEOPLE_CATEGORY = 'people';
