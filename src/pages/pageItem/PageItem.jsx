@@ -11,7 +11,7 @@ const PageItem = () => {
 
     return (
         <div className={`${title} page-item-container`}>
-            <div className={'page-item-card'}>
+            <div className={'page-item-card box-shadow'}>
                 <h2 className={'page-item-card-title'}>
                     {state.name}</h2>
                 <div className={'page-item-image'}>

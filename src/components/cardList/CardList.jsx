@@ -25,7 +25,7 @@ const CardList = ({title}) => {
                         <Link key={item.name}
                               state={{...data[index], title, img: `${IMG_URL}${title}/${getQueryNumber(item.url)}.jpg`}}
                               to={`/${title}/${getQueryNumber(item.url)}`}>
-                            <li className={'card-item'}>
+                            <li className={'card-item box-shadow'}>
                                 <h3>{item.name}</h3>
                                 <img
                                     src={`${IMG_URL}${title}/${getQueryNumber(item.url)}.jpg`}
