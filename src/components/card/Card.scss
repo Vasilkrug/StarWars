@@ -1,0 +1,28 @@
+.card-item {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease-in;
+  border-radius: 10px;
+
+  &:hover {
+    transform: translateY(-15px);
+  }
+
+  h3 {
+    font-size: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFE300;
+    background-color: #021414;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}

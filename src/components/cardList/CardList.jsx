@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {Link} from 'react-router-dom';
-import {EMPTY_IMG_LINK, IMG_URL, PEOPLE_CATEGORY, SWAPI_ROOT} from '../../api/constants';
-import {getQueryNumber} from '../../api/helpers';
+import {Loader, Card} from '../index';
+import {SWAPI_ROOT} from '../../api/constants';
+import {getSpecifiedData} from '../../api/api';
 import './CardList.scss';
-import {getSpecifiedData} from "../../api/api";
-import {Loader} from "../index";
 
 const CardList = ({title, img}) => {
     const [data, setData] = useState([]);
@@ -26,25 +24,12 @@ const CardList = ({title, img}) => {
                 <div className={'card-list-container'}>
                     <ul className={'card-list'}>
                         {data.slice(0, itemsToShow).map((item, index) => {
-                            return (
-                                <li className={'card-item box-shadow'}>
-                                    <Link key={item.name}
-                                          state={{
-                                              ...data[index],
-                                              title,
-                                              img: `${IMG_URL}${title}/${getQueryNumber(item.url)}.jpg`
-                                          }}
-                                          to={`/${title}/${getQueryNumber(item.url)}`}>
-                                        <h3>{item.name}</h3>
-                                        <img
-                                            src={`${IMG_URL}${img}/${getQueryNumber(item.url)}.jpg`}
-                                            alt={`${title} img`}
-                                            onError={(e) => e.target.src = EMPTY_IMG_LINK}
-                                        />
-                                    </Link>
-                                </li>
-
-                            )
+                            return <Card title={title}
+                                         data={data}
+                                         name={item.name}
+                                         url={item.url}
+                                         img={img}
+                                         index={index}/>
                         })}
                     </ul>
                     {itemsToShow >= data.length ? null :
