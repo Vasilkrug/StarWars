@@ -5,7 +5,7 @@ import './Species.scss';
 const Species = () => {
     return (
         <div className={'species-page'}>
-            <CardList title={'species'}/>
+            <CardList title={'species'} img={'species'}/>
         </div>
     );
 };

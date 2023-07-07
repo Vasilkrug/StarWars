@@ -5,7 +5,7 @@ import './Characters.scss';
 const Characters = () => {
     return (
         <div className={'page characters-page'}>
-            <CardList title={'characters'}/>
+            <CardList title={'people'} img={'characters'}/>
         </div>
     );
 };

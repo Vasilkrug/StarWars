@@ -31,18 +31,4 @@ export const getSpecifiedData = async (url) => {
     }
 }
 
-export const getAllData = async () => {
-    const characters = await getSpecifiedData(`${SWAPI_ROOT}${PEOPLE_CATEGORY}`)
-    const vehicles = await getSpecifiedData(`${SWAPI_ROOT}${VEHICLES_CATEGORY}`)
-    const species = await getSpecifiedData(`${SWAPI_ROOT}${SPECIES_CATEGORY}`)
-    const planets = await getSpecifiedData(`${SWAPI_ROOT}${PLANETS_CATEGORY}`)
-    const starships = await getSpecifiedData(`${SWAPI_ROOT}${STARSHIPS_CATEGORY}`)
-    return {
-        characters: characters.flat(),
-        vehicles: vehicles.flat(),
-        species: species.flat(),
-        planets: planets.flat(),
-        starships: starships.flat()
-    }
-}
 

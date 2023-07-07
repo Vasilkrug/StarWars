@@ -5,7 +5,7 @@ import './Staeships.scss';
 const Starships = () => {
     return (
         <div>
-            <CardList title={'starships'}/>
+            <CardList title={'starships'} img={'starships'}/>
         </div>
     );
 };

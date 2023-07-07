@@ -1,22 +1,10 @@
 import {Route, Routes} from 'react-router-dom';
 import {PageItem, Home, Films, Film, Characters, Species, Vehicles, Planets, Starships} from './pages/index'
-import {Logo, Loader, BreadCrumbs} from './components/index';
-import React, {useEffect, useState} from 'react';
-import {getAllData} from './api/api';
+import {Logo, BreadCrumbs} from './components/index';
+import React from 'react';
 import './App.scss';
 
 const App = () => {
-    const [loading, setLoading] = useState(false)
-
-    useEffect(() => {
-        if (!localStorage.getItem('data')) {
-            setLoading(true)
-            getAllData().then(data => {
-                localStorage.setItem('data', JSON.stringify(data))
-                setLoading(false)
-            })
-        }
-    }, [])
 
     return (
         <main className='App'>
@@ -24,7 +12,6 @@ const App = () => {
             <BreadCrumbs/>
             <Routes>
                 <Route path={'/'} element={<Home/>}/>
-                <Route path={'*'} element={<Home/>}/>
                 <Route path={'/films'} element={<Films/>}/>
                 <Route path={'/characters'} element={<Characters/>}/>
                 <Route path={'/species'} element={<Species/>}/>
@@ -38,7 +25,6 @@ const App = () => {
                 <Route path={'/vehicles/:id'} element={<PageItem/>}/>
                 <Route path={'/characters/:id'} element={<PageItem/>}/>
             </Routes>
-            {loading ? <Loader/> : null}
         </main>
     );
 }

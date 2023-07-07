@@ -5,7 +5,7 @@ import './Planets.scss';
 const Planets = () => {
     return (
         <div>
-            <CardList title={'planets'}/>
+            <CardList title={'planets'} img={'planets'}/>
         </div>
     );
 };
