@@ -32,7 +32,7 @@
     .page-item-image {
       img {
         width: 375px;
-        height: 300px;
+        max-height: 100%;
         border-radius: 10px;
       }
     }
@@ -40,7 +40,7 @@
     .page-item-info-list {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      gap: 30px;
 
       li {
         max-width: 400px;

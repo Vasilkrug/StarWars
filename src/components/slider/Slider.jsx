@@ -24,16 +24,12 @@ const Slider = ({url, title, data}) => {
     }, [])
 
     return (
-        <div ref={sliderRef} className={`slider ${title.toLowerCase()}`}>
+        <div ref={sliderRef} className={`slider ${title.toLowerCase()} box-shadow`}>
             <h2>{title}</h2>
-            <Swiper
-                slidesPerView={3}
-                className={'my-slider'}
-                spaceBetween={15}
-            >
-                {data.map((item, index) => {
+            <div className={'my-slider'}>
+                {data.slice(0, 5).map((item, index) => {
                     return (
-                        <SwiperSlide key={item} className={'slide'}>
+                        <div key={item} className={'slide'}>
                             <Link to={`/${title.toLowerCase()}/${item}`}
                                   state={{...currentData[index], title: title.toLowerCase(), img: `${url}/${item}.jpg`}}
                             >
@@ -43,11 +39,10 @@ const Slider = ({url, title, data}) => {
                             <img onError={(e) => e.target.src = EMPTY_IMG_LINK}
                                  src={`${url}/${item}.jpg`}
                                  alt='slide image'/>
-                        </SwiperSlide>
+                        </div>
                     )
                 })}
-                {data.length <= 2 ? null : <SliderButtons/>}
-            </Swiper>
+            </div>
         </div>
     );
 };

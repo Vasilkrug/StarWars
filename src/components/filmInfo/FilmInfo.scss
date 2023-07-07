@@ -1,9 +1,10 @@
 .film-info {
   width: 100%;
+  padding: 30px;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 20px;
-  align-items: center;
   flex-wrap: wrap;
 }
