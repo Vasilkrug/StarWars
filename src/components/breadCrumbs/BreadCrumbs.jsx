@@ -1,49 +1,24 @@
 import React from 'react';
-import {Link, useLocation} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import useBreadcrumbs from "use-react-router-breadcrumbs";
 import './BreadCrumbs.scss';
 
 const BreadCrumbs = () => {
-    const location = useLocation();
-    let activeCrumbs = ''
-    const crumbs = location.pathname.split('/')
-        .filter(crumb => crumb !== '' && crumb !== 'StarWars')
-        .map((crumb, index, array) => {
-            activeCrumbs += `/${crumb}`
-            if (index === 0) {
-                return (
-                    <>
-                        <div key={index} className={'crumb'}>
-                            <Link to={'/'}>home</Link>
-                        </div>
-                        <div className={'crumb'} key={crumb}>
-                            {index === array.length - 1 ?
-                                <p>{crumb}</p>
-                                :
-                                <Link to={activeCrumbs}>{crumb}</Link>
-                            }
-                        </div>
-                    </>
-                )
-            }
-            return (
-                <div className={'crumb'} key={crumb}>
-                    {index === array.length - 1 ?
-                        <p>{crumb}</p>
-                        :
-                        <Link to={activeCrumbs}>{crumb}</Link>
-                    }
-                </div>
-            )
-        })
-
+    const breadcrumbs = useBreadcrumbs();
     return (
         <>
-            {crumbs.length ?
-                <div className={'breadcrumbs'}>
-                    {crumbs}
-                </div>
-                : null
-            }
+            {breadcrumbs.length < 2 ? null :
+                <div className="breadcrumbs">
+                    {breadcrumbs.map(({breadcrumb, match, location}, index) => {
+                        return (
+                            <div className="crumb" key={match.pathname}>
+                                {index < breadcrumbs.length - 1 ?
+                                    <Link to={match.pathname || ""}>{breadcrumb}</Link>
+                                    : <p>{location.state?.name ?? breadcrumb.props.children}</p>}
+                            </div>
+                        )
+                    })}
+                </div>}
         </>
     );
 };

@@ -14,6 +14,7 @@ const Films = () => {
         getApiData(`${SWAPI_ROOT}${FILM_CATEGORY}`)
             .then(data => dispatch(getFilms(data.results)))
     }, [])
+
     return (
         <div className={'films-page'}>
             <FilmSlider/>

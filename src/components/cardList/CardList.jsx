@@ -24,7 +24,8 @@ const CardList = ({title, img}) => {
                 <div className={'card-list-container'}>
                     <ul className={'card-list'}>
                         {data.slice(0, itemsToShow).map((item, index) => {
-                            return <Card title={title}
+                            return <Card key={item.name}
+                                         title={title}
                                          data={data}
                                          name={item.name}
                                          url={item.url}

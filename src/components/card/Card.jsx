@@ -11,9 +11,9 @@ const Card = ({name, data, title, img, url, index}) => {
                   state={{
                       ...data[index],
                       title,
-                      img: `${IMG_URL}${title}/${getQueryNumber(url)}.jpg`
+                      img: `${IMG_URL}${img}/${getQueryNumber(url)}.jpg`
                   }}
-                  to={`/${title}/${getQueryNumber(url)}`}>
+                  to={`/${img}/${getQueryNumber(url)}`}>
                 <h3>{name}</h3>
                 <img
                     src={`${IMG_URL}${img}/${getQueryNumber(url)}.jpg`}

@@ -14,7 +14,7 @@ const FilmSlide = ({index, title, year}) => {
                      alt='film'/>
             </div>
             <div className='slide-desc'>
-                <Link to={`/films/${index}`}>
+                <Link to={`/films/${index}`} state={{'name': title}}>
                     <h2>{title}</h2>
                 </Link>
                 <img src={ball} alt='ball'/>
