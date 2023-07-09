@@ -1,4 +1,4 @@
-.slider {
+.info-list-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -18,13 +18,13 @@
     text-transform: capitalize;
   }
 
-  .my-slider {
+  .info-list{
     flex: 1;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
 
-    .slide {
+    .info-link {
       width: 80px;
       display: flex;
       flex-direction: column-reverse;

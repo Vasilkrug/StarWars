@@ -3,7 +3,7 @@ import FilmSlide from "./filmSlide/FilmSlide";
 import Loader from "./loader/Loader";
 import SliderButtons from "./sliderButtons/SliderButtons";
 import NavItem from "./navItem/NavItem";
-import Slider from "./slider/Slider";
+import InfoList from "./infoList/InfoList";
 import FilmItem from "./filmItem/FilmItem";
 import FilmInfo from "./filmInfo/FilmInfo";
 import FilmSlider from "./filmSlider/FilmSlider";
@@ -19,7 +19,7 @@ export {
     Loader,
     SliderButtons,
     NavItem,
-    Slider,
+    InfoList,
     FilmItem,
     FilmInfo,
     FilmSlider,
