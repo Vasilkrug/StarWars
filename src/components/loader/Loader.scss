@@ -1,5 +1,5 @@
 .loader {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
@@ -10,8 +10,8 @@
   align-items: center;
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     animation-name: animate_reduce;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
