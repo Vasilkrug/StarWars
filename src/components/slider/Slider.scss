@@ -8,9 +8,14 @@
   min-height: 250px;
   width: 500px;
   background-color: #021414;
+  position: relative;
 
   @media (max-width: 1150px) {
     width: 100%;
+  }
+
+  h2 {
+    text-transform: capitalize;
   }
 
   .my-slider {
@@ -32,6 +37,7 @@
         text-align: center;
         cursor: pointer;
         color: #FFE300;
+        text-transform: capitalize;
       }
 
       img {
