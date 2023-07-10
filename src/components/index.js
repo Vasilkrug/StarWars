@@ -11,6 +11,8 @@ import NavList from "./navList/NavList";
 import CardList from "./cardList/CardList";
 import BreadCrumbs from "./breadCrumbs/BreadCrumbs";
 import Card from "./card/Card";
+import InfoLink from "./infoLink/InfoLink";
+import Pagination from "./pagination/Pagination";
 
 
 export {
@@ -26,5 +28,7 @@ export {
     NavList,
     CardList,
     BreadCrumbs,
-    Card
+    Card,
+    Pagination,
+    InfoLink
 }
