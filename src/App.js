@@ -1,4 +1,4 @@
-import {Route, Routes} from 'react-router-dom';
+import {Navigate, Route, Routes} from 'react-router-dom';
 import {PageItem, Home, Films, Film, Characters, Species, Vehicles, Planets, Starships} from './pages/index'
 import {Logo, BreadCrumbs} from './components/index';
 import React from 'react';
@@ -24,6 +24,7 @@ const App = () => {
                 <Route path={'/starships/:id'} element={<PageItem/>}/>
                 <Route path={'/vehicles/:id'} element={<PageItem/>}/>
                 <Route path={'/characters/:id'} element={<PageItem/>}/>
+                <Route path={'*'} element={<Navigate to={'/'}/>}/>
             </Routes>
         </main>
     );
