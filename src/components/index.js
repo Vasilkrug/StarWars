@@ -13,6 +13,7 @@ import BreadCrumbs from "./breadCrumbs/BreadCrumbs";
 import Card from "./card/Card";
 import InfoLink from "./infoLink/InfoLink";
 import Pagination from "./pagination/Pagination";
+import SearchForm from "./searchForm/SearchForm";
 
 
 export {
@@ -30,5 +31,6 @@ export {
     BreadCrumbs,
     Card,
     Pagination,
-    InfoLink
+    InfoLink,
+    SearchForm
 }
