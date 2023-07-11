@@ -8,25 +8,22 @@ import 'swiper/css';
 
 const FilmSlider = () => {
     const films = useSelector(state => state.films.films);
-    const [width, setWidth] = useState(1440);
-
-    const handleResize = () => {
-        setWidth(window.innerWidth)
-    }
-    useEffect(() => {
-        window.addEventListener('resize', handleResize)
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
-    }, [])
 
     return (
         <>
             {!films.length ? <Loader/> :
                 <div className={'slider-container'}>
                     <Swiper
+                        breakpoints={{
+                            320: {
+                                slidesPerView: 1
+                            },
+                            768: {
+                                slidesPerView: 2
+                            }
+                        }}
                         spaceBetween={40}
-                        slidesPerView={width < 662 ? 1 : 2}
+                        slidesPerView={2}
                         className={'films-slider'}
                     >
                         {films.map((film, index) => {
