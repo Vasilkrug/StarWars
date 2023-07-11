@@ -1,5 +1,5 @@
 import {v4 as uuidv4} from 'uuid'
-import {characters, films, planets, species, starships, vehicles} from "../../assets/icons/icons";
+import {films,vehicles,characters,species,starships,planets} from '../../assets/images/images'
 
 export const navData = [
     {'id': uuidv4(), img: films, 'title': 'Films', 'route': '/films'},

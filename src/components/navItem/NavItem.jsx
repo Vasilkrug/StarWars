@@ -4,9 +4,8 @@ import './navItem.scss';
 
 const NavItem = ({img, title, path}) => {
     return (
-        <li className={'nav-item'}>
+        <li className={'nav-item'} style={{backgroundImage: `url(${img})`}}>
             <Link to={path}>
-                <img src={img} alt={title}/>
                 <p>{title}</p>
             </Link>
         </li>

@@ -38,7 +38,7 @@ const CardList = ({title, img}) => {
                         {filteredData.slice(0, itemsToShow).map((item, index) => {
                             return <Card key={item.name}
                                          title={title}
-                                         data={data}
+                                         data={filteredData}
                                          name={item.name}
                                          url={item.url}
                                          img={img}
