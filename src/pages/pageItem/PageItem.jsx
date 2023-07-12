@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import {EMPTY_IMG_LINK} from '../../api/constants';
 import './PageItem.scss';
@@ -8,6 +8,10 @@ const PageItem = () => {
     const {state} = location;
     const title = location.state.title;
     const filteredKeys = ['vehicles', 'starships', 'species', 'residents', 'people', 'homeworld', 'name', 'edited', 'films', 'created', 'url', 'title', 'img', 'pilots']
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },[])
 
     return (
         <div className={`${title} page-item-container`}>
