@@ -5,20 +5,27 @@ body {
   width: 100%;
   font-family: 'Lexend', sans-serif;
   color: #FFFFFF;
-  background: url("./assets/images/bg.jpg") fixed;
-
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  background-size: cover;
+  background: #10100e url("./assets/images/bg.jpg") no-repeat fixed 0 0;
 }
 
 .box-shadow {
-  -webkit-box-shadow: 0px -5px 20px -5px rgba(45, 191, 10, 0.6);
-  -moz-box-shadow: 0px -5px 20px -5px rgba(45, 191, 10, 0.6);
-  box-shadow: 0px -5px 20px -5px rgba(45, 191, 10, 0.6);
+
+  &:hover {
+    -webkit-box-shadow: 0px -5px 20px -5px rgba(45, 191, 10, 0.6);
+    -moz-box-shadow: 0px -5px 20px -5px rgba(45, 191, 10, 0.6);
+    box-shadow: 0px -5px 20px -5px rgba(45, 191, 10, 0.6);
+  }
 }
 
 .App {
-  min-height: 100vh;
+  height: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding-bottom: 20px;
+
 }
 

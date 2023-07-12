@@ -8,6 +8,10 @@
   background-size: cover;
   background-position: center;
 
+  &:last-child {
+    margin-bottom: 20px;
+  }
+
   @media (max-width: 559px) {
     width: 100%;
   }
